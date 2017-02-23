@@ -1,0 +1,128 @@
+mv public05.in jacob1.in
+mv public05.output jacob1.output
+(check-tests 1 1)
+(check-tests 1 1)
+(check-tests 1 1)
+(check-tests 1 1)
+(check-tests 4 2)
+(check-tests 1)
+(check-tests 1 1)
+(check-tests 1 2)
+cat jacob2.in | ./a.out 
+cat jacob2.output
+\n >> jacob2.output 
+echo \n >> jacob2.output 
+cat jacob2.output
+(check-tests 1 2)
+(check-tests 1 2)
+(check-tests 1 2)
+ls
+cp public03.in jacob3.in
+cp public03.output jacob3.output
+ls
+public01.in > a.out
+./a.out public01.in 
+cat public01.in | ./a.out 
+ls
+gcc grades.c 
+gcc grades.c -lm
+cat public01.in | ./a.out 
+(check-tests 4 2)
+(check-tests 4 2)
+(check-tests 4 2)
+ls
+git status
+ls
+hi
+clear
+clear
+clear
+ls
+ls
+(check-tests 4 2)
+cat jacob2.in | ./a.out 
+cat jacob2.in | ./a.out 
+(check-tests 4 2)
+cat jacob2.in | ./a.out > my_results
+diff my_results jacob2.output 
+cat jacob2.in | ./a.out > my_results
+diff my_results jacob2.output 
+cat jacob2.in | ./a.out 
+cat jacob2.in | ./a.out | less
+(check-tests 4 2)
+diff my_results jacob2.output 
+printf hi
+printf %5.4f\n 6
+printf %5.4f\n 69
+printf %5.4f\n 6987
+printf %5.4f\n 6987767676
+(check-tests 4 2)
+ls
+cat jacob3.in 
+cat jacob3.output 
+cp jacob2.output jacob3.output
+(check-tests 4 3)
+cat jacob2.in | ./a.out 
+ls
+cat jacob2.in | ./a.out > my_results 
+diff my_results jacob3.output 
+(check-tests 4 3)
+cat jacob3.in | ./a.out > my_results 
+diff my_results jacob3.output 
+cat jacob3.in | ./a.out > my_results 
+(check-tests 4 3)
+gcc -g hByeb
+gcc -g test.c 
+ls
+gdb a.out
+valgrind
+sudo apt-get install valgrind
+valgrind ./a.out 
+valgrind ./a.out --track-origins=yes
+gcc -g test.c
+./a.out 
+gdb a.out
+valgrind a.out
+valgrind ./a.out 
+valgrind --track-origins=yes ./a.out 
+gdb ./a.out 
+gcc -g test.c
+gdb ./a.out
+gdb ./a.out
+gdb a.out
+tern
+npm
+npm install -g tern
+exit
+ls
+cd 216h-jprinz/projects/project1/
+s
+ls
+(check-tests 4 4)
+rm jacob4.*
+ls
+cp public03.in jacob4.in
+cp public03.output jacob4.output
+(check-tests 4 4)
+cat jacob4.in | ./a.out > my_results 
+diff my_results jacob4.output 
+cat jacob4.in | ./a.out > my_results 
+diff my_results jacob4.output 
+ls
+cat my_results 
+gcc grades.c -lm
+cat jacob4.in | ./a.out
+gcc grades.c -lm
+cat jacob4.in | ./a.out > my_results 
+diff my_results jacob4.output 
+cat jacob4.in | ./a.out
+git status
+git diff grades.c 
+gcc grades.c -lm
+(check-tests 4 4)
+git add grades.c 
+ls
+git status
+git commit
+git status
+git pull
