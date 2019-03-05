@@ -37,14 +37,14 @@
 (require 'goto-chg)
 
 ;;VIM
-(evil-mode 1)
+;;(evil-mode 1)
 
-;;Python stuff
+;;Python stuff ;;turned off, don't need now
 (elpy-enable)
 
-;;paredit
-(paredit-mode)
-(evil-paredit-mode)
+;;paredit ;;also turned off, not using lisp and don't remember how paredit works
+;;(paredit-mode)
+;;(evil-paredit-mode)
 
 ;;Custom
 (defun open-in-browser (file-name &optional wildcards)
@@ -53,7 +53,7 @@
                         (confirm-nonexistent-file-or-buffer)))
   (shell-command (concat "firefox-trunk " file-name)))
 
-;;tern
+;;tern;; looking at this years later, I have no idea what this does
 (add-hook 'js-mode-hook (lambda () (tern-mode t)))
 (eval-after-load 'tern
    '(progn
@@ -62,7 +62,29 @@
 
 (global-auto-complete-mode)
 
-;;parens
-(global-dummyparens-mode)
+;;parens ;;turned this off in case it was causing problems... TBD
+;;(global-dummyparens-mode)
+
+;;set python interpereter to run with "M-x run-python"
+ (setq python-shell-interpreter "ipython3"
+       python-shell-interpreter-args "-i")
+
+;;Coq things:
+;; This next line makes imports work...
+(setq coq-compile-before-require t)
 
 ;;;init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (proof-general company-coq melpa-upstream-visit tern-auto-complete slime-volleyball rainbow-delimiters magit js2-mode flycheck evil-paredit elpy dummyparens))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
